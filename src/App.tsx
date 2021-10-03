@@ -20,7 +20,7 @@ import EasterEgg from './components/EasterEgg'
 import GlobalCheckClaimStatus from './components/GlobalCheckClaimStatus'
 import history from './routerHistory'
 // Views included in the main bundle
-import Pools from './views/Pools'
+// import Pools from './views/Pools'
 import Swap from './views/Swap'
 import {
   RedirectDuplicateTokenIds,
@@ -33,7 +33,7 @@ import { RedirectPathToSwapOnly, RedirectToSwap } from './views/Swap/redirects'
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
 const Home = lazy(() => import('./views/Home'))
-const Farms = lazy(() => import('./views/Farms'))
+// const Farms = lazy(() => import('./views/Farms'))
 const FarmAuction = lazy(() => import('./views/FarmAuction'))
 const Lottery = lazy(() => import('./views/Lottery'))
 const Ifos = lazy(() => import('./views/Ifos'))
@@ -84,12 +84,12 @@ const App: React.FC = () => {
             <Route exact path="/farms/auction">
               <FarmAuction />
             </Route>
-            <Route path="/farms">
+            {/* <Route path="/farms">
               <Farms />
             </Route>
             <Route path="/pools">
               <Pools />
-            </Route>
+            </Route> */}
             <Route path="/lottery">
               <Lottery />
             </Route>
